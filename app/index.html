@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FriendChat 👯‍♀️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>FriendChat</h1>
+      <p>A tiny chat corner for you and your friend.</p>
+    </header>
+
+    <section class="names">
+      <div class="name-input">
+        <label for="friend1Name">Your name (Friend 1)</label>
+        <!-- Default value Tolu, can be changed -->
+        <input id="friend1Name" type="text" placeholder="e.g. Tolu" value="Tolu" />
+      </div>
+      <div class="name-input">
+        <label for="friend2Name">Your friend's name (Friend 2)</label>
+        <input id="friend2Name" type="text" placeholder="e.g. Blessing" />
+      </div>
+    </section>
+
+    <section class="chat-container">
+      <div class="chat-window" id="chatWindow"></div>
+    </section>
+
+    <section class="composer">
+      <div class="sender-toggle">
+        <button id="friend1Sender" class="sender-button active">Friend 1</button>
+        <button id="friend2Sender" class="sender-button">Friend 2</button>
+      </div>
+
+      <textarea
+        id="messageInput"
+        rows="3"
+        placeholder="Type a message..."
+      ></textarea>
+
+      <button id="sendButton" class="send-button">Send</button>
+    </section>
+
+    <section class="footer">
+      <button id="clearChat" class="secondary">Clear Chat</button>
+      <small>
+        Messages are stored only in this browser using localStorage (no server).
+      </small>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
